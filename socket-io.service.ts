@@ -12,7 +12,6 @@ export class WrappedSocket {
     ioSocket: any;
 
     constructor(@Inject(SOCKET_CONFIG_TOKEN) config: SocketIoConfig) {
-        const url: string = config.url || '';
         const options: any = config.options || {};
     }
 
