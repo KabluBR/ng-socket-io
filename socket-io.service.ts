@@ -13,7 +13,7 @@ export class WrappedSocket {
     options: any;
 
     constructor(@Inject(SOCKET_CONFIG_TOKEN) config: SocketIoConfig) {
-        this.options: any = config.options || {};
+        this.options = config.options || {};
     }
 
     on(eventName: string, callback: Function) {
