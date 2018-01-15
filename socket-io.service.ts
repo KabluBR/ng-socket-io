@@ -10,9 +10,10 @@ import { SOCKET_CONFIG_TOKEN } from './socket-io.module';
 export class WrappedSocket {
     subscribersCounter = 0;
     ioSocket: any;
+    options: any;
 
     constructor(@Inject(SOCKET_CONFIG_TOKEN) config: SocketIoConfig) {
-        const options: any = config.options || {};
+        this.options: any = config.options || {};
     }
 
     on(eventName: string, callback: Function) {
